@@ -6,8 +6,7 @@
  */
 
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Navbar from "./Navbar"
+import Navbar from "./NavBar"
 import "../styles/layout.css"
 
 const Layout = ({ children }) => {
