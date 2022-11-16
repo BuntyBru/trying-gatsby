@@ -7,24 +7,13 @@
 
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
+import Navbar from "./Navbar"
 import "../styles/layout.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Navbar />
       <div
         style={{
           margin: `0 auto`,
@@ -32,7 +21,7 @@ const Layout = ({ children }) => {
           padding: `var(--size-gutter)`,
         }}
       >
-        <main>{children}</main>
+        <main className="mainBody">{children}</main>
       </div>
     </>
   )

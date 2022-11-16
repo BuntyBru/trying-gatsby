@@ -24,7 +24,9 @@
   --size-content: 54rem;
   --size-gutter: var(--space-5);
   --size-gap: var(--space-6);
+  --light-black: #151a23;
 }
+
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
@@ -42,6 +44,8 @@ body {
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
+  background-color: #1a202c;
+  color: var(--color-code-bg);
 }
 a {
   background-color: transparent;
@@ -221,4 +225,8 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: none;
+}
+
+.mainBody {
+  padding-top: 100px;
 }
